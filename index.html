@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <section class="bg-[#15803D] p-5">
+        <header class="max-w-[1400px] mx-auto">
+            <nav class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-white font-extrabold">
+                        Green Earth
+                    </h1>
+                </div>
+                <div class="flex items-center gap-8 text-white font-medium">
+                    <a href="#about">
+                        About
+                    </a>
+                    <a href="#gallery">
+                        Gallery
+                    </a>
+                    <a href="#tree">
+                        Plant a Tree
+                    </a>
+                </div>
+                <div>
+                    <a href="#tree">
+                        <button class="bg-[#FACC15] px-3 py-2 rounded-3xl text-[#15803D]">
+                            Plant a Tree
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <section class="banner mb-20">
+        <div class="bg-[#CFF0DC] flex items-center gap-4">
+            <img src="./assets/hero-leaf1.png" alt="">
+            <div class="text-center">
+                <h1 class="text-[#1F2937] font-bold text-[31px]">
+                    Plant a Tree, Grow a Future
+                </h1>
+                <p class="text-[#1F2937] font-regular text-[16px] my-3">
+                    Join our mission to plant 1 million trees and make the Earth greener for future <br>
+                    generations.
+                </p>
+                <a href="#tree">
+                    <button class="bg-[#FACC15] px-3 py-2 rounded-3xl text-[#15803D]">
+                        Plant a Tree
+                    </button>
+                </a>
+            </div>
+            <img src="./assets/hero-leaf2.png" alt="">
+
+        </div>
+    </section>
+    <section class="bg-[#CFF0DC]">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="parent">
+                <h1 class="text-[#1F2937] font-bold text-[25px] text-center mb-10">
+                    Choose Your Trees
+                </h1>
+<div class="flex gap-4">
+
+    <!-- Sidebar -->
+    <div class="w-[15%]">
+        <h4 class="text-[#1F2937] font-bold mb-2">Categories</h4>
+        <div class="p-3 bg-[#15803D] rounded text-white text-center">
+            All Trees
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="w-[70%]">
+        <div class="grid grid-cols-3 gap-4">
+
+            <!-- Card -->
+            <div class="card bg-base-100 shadow">
+                <figure>
+                    <img class="h-[200px] w-full object-cover"
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Card Title</h2>
+                    <p>Tree description here</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card bg-base-100 shadow">
+                <figure>
+                    <img class="h-[200px] w-full object-cover"
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Card Title</h2>
+                    <p>Tree description here</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card bg-base-100 shadow">
+                <figure>
+                    <img class="h-[200px] w-full object-cover"
+                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Card Title</h2>
+                    <p>Tree description here</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Cart -->
+    <div class="w-[15%]">
+        <h4 class="font-bold mb-2">Cart</h4>
+        <div class="border p-4 rounded h-[300px]">
+            No items added
+        </div>
+    </div>
+
+</div>
+                <!-- <div class="flex gap-2">
+                    <div class="child w-[20%]">
+                        <h4 class="text-[#1F2937] font-bold">
+                            Categories
+                        </h4>
+                        <div class=" p-4 py-2 w-full bg-[#15803D] rounded-sm text-white my-2">
+                            All Trees
+                        </div>
+                    </div>
+                    <div class="child w-[60%]">
+                        <div class="flex gap-3">
+                            <div class="card bg-base-100 w-96 shadow-sm">
+                                <figure>
+                                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                        alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card Title</h2>
+                                    <p>A card component has a figure, a body part, and inside body there are title and
+                                        actions
+                                        parts</p>
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-base-100 w-96 shadow-sm">
+                                <figure>
+                                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                        alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card Title</h2>
+                                    <p>A card component has a figure, a body part, and inside body there are title and
+                                        actions
+                                        parts</p>
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-base-100 w-96 shadow-sm">
+                                <figure>
+                                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                        alt="Shoes" />
+                                </figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Card Title</h2>
+                                    <p>A card component has a figure, a body part, and inside body there are title and
+                                        actions
+                                        parts</p>
+                                    <div class="card-actions justify-end">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child add-to-cart w-[20%]"></div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>
