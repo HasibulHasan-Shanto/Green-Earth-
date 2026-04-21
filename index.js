@@ -26,11 +26,11 @@ const displayCategories = (cats) => {
 
     for (const cat of cats) {
         const p = document.createElement('p')
-        p.className = 'active hover:bg-[#15803D] hover:text-white p-2 rounded-sm text-black mb-1'
+        p.className = 'hover:bg-[#15803D] hover:text-white p-2 rounded-sm text-black mb-1'
         p.innerHTML = `
         ${cat.category_name}
         `
-        p.addEventListener('click', () =>{
+        p.addEventListener('click', () => {
             for (const activeBtn of allActiveButton) {
                 activeBtn.classList.remove('bg-[#15803D]', 'text-white')
                 activeBtn.classList.add('text-black')
@@ -56,10 +56,10 @@ const displayAllPlants = (plants) => {
     allPlants.innerHTML = ''
     for (const plant of plants) {
         const div = document.createElement('div')
-        div.className = "bg-blue-400 p-2 rounded-md" 
+        div.className = "bg-[#FFFFFF] p-2 rounded-md shadow-lg"
         div.innerHTML = `
         <img class="w-84 h-74 rounded-md" src=${plant.image} alt="">
-            <h3 class="font-bold">
+            <h3 class="catName font-bold">
                 ${plant.name}
             </h3>
             <p class="line-clamp-3">
@@ -69,20 +69,63 @@ const displayAllPlants = (plants) => {
                 <p class="bg-[#DCFCE7] px-3 py-1 rounded-sm text-[#15803D]">
                     ${plant.category}
                 </p>
-                <p class="font-bold">
+                <p class="catPrice font-bold">
                     <span class="font-extrabold">৳</span>${plant.price}
                 </p>
             </div>
-            <button class="bg-[#15803D] py-2 rounded-md text-white w-full">
+            <button class="addToCart bg-[#15803D] py-2 rounded-md text-white w-full">
                 Add To Cart
             </button>
         `
+        const addToCartButton = div.querySelectorAll('.addToCart')
+        for (const cartBtn of addToCartButton) {
+            cartBtn.addEventListener('click', () => {
+                addToCartPrice(plant)
+            })
+        }
         allPlants.appendChild(div)
     }
 }
+let totalPrice = 0
+const addToCartPrice = (plant) => {
+    const cartContainer = document.getElementById('cartContainer')
+    const price = document.getElementById('price')
+    const div = document.createElement('div')
+    div.className = 'bg-[#DDF5E7] p-2 rounded-md mb-2'
+    div.innerHTML = `
+                            <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[#1F2937] font-semibold">
+                                     ${plant.name}
+                                </p>
+                                <p>
+                                    <span class="font-extrabold">৳</span>${plant.price}  * 1
+                                </p>
+                                </div>
+                                <div class="remove">
+                                    <i class="fa-solid fa-x"></i>
+                                </div>
+                            </div>
+                `
+    totalPrice += parseInt(plant.price)
+    console.log(totalPrice)
+    price.innerText = totalPrice
+
+    const removeBtn = div.querySelector('.remove')
+    removeBtn.addEventListener('click', () => {
+        totalPrice -= parseInt(plant.price)
+        price.innerText = totalPrice
+        div.remove()
+    })
+    cartContainer.appendChild(div)
+
+
+
+
+}
 const loadSinglePlant = (id) => {
     fetch(`https://openapi.programming-hero.com/api/category/${id}`)
-    .then(res => res.json())
+        .then(res => res.json())
         .then(data => displaySinglePlant(data.plants))
 }
 const displaySinglePlant = (singlePlants) => {
@@ -90,7 +133,7 @@ const displaySinglePlant = (singlePlants) => {
     allPlants.innerHTML = ''
     for (const singlePlant of singlePlants) {
         const div = document.createElement('div')
-        div.className = "bg-blue-400 p-2 rounded-md"
+        div.className = "bg-[#FFFFFF] p-2 rounded-md shadow-lg"
         div.innerHTML = `
         <img class="w-84 h-74 rounded-md" src=${singlePlant.image} alt="">
             <h3 class="font-bold">
@@ -104,13 +147,19 @@ const displaySinglePlant = (singlePlants) => {
                     ${singlePlant.category}
                 </p>
                 <p class="font-bold">
-                    <span class="font-extrabold">৳</span>${singlePlant.price}
+                    <span class="font-extrabold">৳</span>${singlePlant.price} * 1
                 </p>
             </div>
-            <button class="bg-[#15803D] py-2 rounded-md text-white w-full">
+            <button class="addToCart bg-[#15803D] py-2 rounded-md text-white w-full">
                 Add To Cart
             </button>
         `
+        const addToCartButton = div.querySelectorAll(('.addToCart'))
+        for (const btn of addToCartButton) {
+            btn.addEventListener('click', () => {
+                addToCartPrice(singlePlant)
+            })
+        }
         allPlants.appendChild(div)
     }
 }

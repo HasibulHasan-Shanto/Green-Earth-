@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth</title>
 
+    <!-- font-awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- DaisyUI + Tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -57,21 +62,21 @@
     </section>
 
     <!-- Main Section -->
-    <section class="bg-[#DDF5E7] py-10">
+    <section id="tree" class="bg-[#DDF5E7] py-10">
         <div class="max-w-[1400px] mx-auto">
 
             <h1 class="text-[#1F2937] font-bold text-[35px] text-center mb-10">
                 Choose Your Trees
             </h1>
 
-            <div class="flex gap-2">
-                <div id="catContainer" class="w-[15%] bg-red-300 rounded-sm">
+            <div class="flex gap-2  items-start">
+                <div id="catContainer" class="w-[15%] rounded-sm">
                     <p class="text-[#1F2937] font-bold text-[14px] p-3">
                         Categories
                     </p>
                 </div>
-                <div id="allPlants" class="w-[70%] bg-red-300 grid grid-cols-3 gap-2">
-                    
+                <div id="allPlants" class="w-[70%] grid grid-cols-3 gap-2">
+
                     <!-- <div class="bg-slate-400 p-2 rounded-md">
                         <img class="w-84" src="./assets/about.png" alt="">
                         <h3 class="font-bold">
@@ -93,15 +98,65 @@
                         </button>
                     </div> -->
                 </div>
-                <div class="w-[15%] bg-red-300 p-3 rounded-sm">
-                    <button>
-                        All Trees
-                    </button>
+                <div class="w-[15%] bg-[#FFFFFF] p-3 rounded-sm">
+                    <p class="font-bold mb-3 text-[20px] text-[#1F2937]">
+                        Your Cart
+                    </p>
+                    <div id="cartContainer">
+                        <!-- <div class="bg-[#DDF5E7] p-2 rounded-md">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-[#1F2937] font-semibold">
+                                        Mango Tree
+                                    </p>
+                                    <p>
+                                        500
+                                    </p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-x"></i>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="flex justify-between border-t">
+                        <p>
+                            Total:
+                        </p>
+                        <p class="font-extrabold">
+                            ৳<span id="price" class="font-medium">0</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    <section id="about" class="bg-[#DDF5E7]">
+        <div class="max-w-[1400px] mx-auto">
+            <h1 class="text-[#1F2937] font-bold text-[35px] text-center mb-10">
+                About the Campaign
+            </h1>
+            <div class="flex items-center justify-center gap-4 w-full">
+                <div>
+                    <img class="rounded-md" src="./assets/about.png" alt="">
+                </div>
+                <div class="w-[50%]">
+                    <p class="text-[#1F2937] pr-[164px]">
+                        Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since
+                        our start,
+                        we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests,
+                        create habitats
+                        for wildlife, and combat global warming.
+                    </p>
+                    <ol class="list-disc pl-5 mt-5 text-[#1F2937]">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="index.js"></script>
 </body>
 
