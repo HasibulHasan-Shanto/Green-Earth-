@@ -163,5 +163,17 @@ const displaySinglePlant = (singlePlants) => {
         allPlants.appendChild(div)
     }
 }
-allPlants()
+
+const loadPlant = (id) => {
+    fetch(`https://openapi.programming-hero.com/api/plant/1`)
+    .then(res => res.json())
+        .then(data => displayPlant(data.plants))
+}
+
+const displayPlant = (plants) => {
+    console.log(plants)
+    const modalContainer = document.getElementById
+}
+loadPlant()
+// allPlants()
 loadCategories()

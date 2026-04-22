@@ -131,7 +131,18 @@
             </div>
         </div>
     </section>
-    <section id="about" class="bg-[#DDF5E7]">
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+    <dialog id="my_modal_3" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click on ✕ button to close</p>
+        </div>
+    </dialog>
+    <section id="about" class="bg-[#DDF5E7] pb-20">
         <div class="max-w-[1400px] mx-auto">
             <h1 class="text-[#1F2937] font-bold text-[35px] text-center mb-10">
                 About the Campaign
@@ -156,6 +167,66 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="bg-[#CFF0DC] py-20">
+        <div class="max-w-[1400px] mx-auto">
+            <h1 class="text-[#1F2937] font-bold text-[35px] text-center mb-10">
+                Our Impact
+            </h1>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-[#FFFFFF] py-8 rounded-md shadow-md text-center">
+                    <h6 class="font-bold text-[#15803D] text-3xl">
+                        500K+
+                    </h6>
+                    <p class="text-gray-600">
+                        Trees Planted
+                    </p>
+                </div>
+                <div class="bg-[#FFFFFF] py-8 rounded-md shadow-lg text-center">
+                    <h6 class="font-bold text-[#15803D] text-3xl">
+                        120+
+                    </h6>
+                    <p class="text-gray-600">
+                        Communities Involved
+                    </p>
+                </div>
+                <div class="bg-[#FFFFFF] py-8 rounded-md shadow-lg text-center">
+                    <h6 class="font-bold text-[#15803D] text-3xl">
+                        30+
+                    </h6>
+                    <p class="text-gray-600">
+                        Countries Reached
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#166534] py-20">
+        <div class="max-w-[1400px] mx-auto">
+            <h1 class="text-[#FFFFFF] font-bold text-[25px] text-center mb-10">
+                Plant a Tree Today
+            </h1>
+            <div class="bg-[#15803D] p-7 rounded-sm w-[450px] m-auto">
+                <input type="text" name="name" id="name" placeholder="Your Name"
+                    class="bg-white p-2 border-none rounded-sm w-full mb-2">
+                <input type="text" name="email" id="email" placeholder="Your email address"
+                    class="bg-white p-2 border-none rounded-sm w-full mb-2">
+                <select class="border border-none p-2 rounded-sm w-full bg-white mb-2">
+                    <option disabled selected>Number of Trees</option>
+                    <option>Plant</option>
+                    <option>Tree</option>
+                    <option>Flower</option>
+                </select>
+                <button class="bg-[#FACC15] py-2 rounded-md w-full text-[#15803D]">
+                    Donate Now
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="bg-[#14532D] py-5 text-center">
+        <p class="text-white">
+            © 2025 Green Earth. All Rights Reserved.
+        </p>
     </section>
     <script src="index.js"></script>
 </body>
